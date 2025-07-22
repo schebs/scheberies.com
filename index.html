@@ -39,24 +39,31 @@
       font-size: 1.1em;
       line-height: 1.6;
     }
+
+    /* Carousel Styles */
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+      max-width: 90vw;
+      margin: 0 auto 40px;
+    }
     .carousel {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
       gap: 20px;
-      padding: 20px;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      max-width: 100%;
+      animation: scroll 40s linear infinite;
     }
     .carousel img {
-      flex: 0 0 auto;
-      height: 280px;
+      max-height: 300px;
+      height: auto;
       width: auto;
-      object-fit: cover;
       border-radius: 8px;
-      scroll-snap-align: center;
+      flex-shrink: 0;
     }
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     .logos {
       display: flex;
       justify-content: center;
@@ -74,53 +81,39 @@
   <header>
     <h1>WYATT SCHEBERIES</h1>
     <div class="social-icons">
-      <a href="#">📸</a>
-      <a href="#">in</a>
+      <a href="#">📸</a>  <!-- Instagram -->
+      <a href="#">in</a> <!-- LinkedIn -->
       <a href="mailto:wyatt@scheberies.com">✉️</a>
-      <a href="#">GH</a>
+      <a href="#">GH</a> <!-- GitHub -->
     </div>
   </header>
 
   <hr />
 
   <section class="bio">
-    <p>I currently work on digital giving at Causes.com and support early-growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees, and worked on wildfire prevention.</p>
+    <p>I currently work on digital giving at Causes.com and support early growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees, and worked on wildfire prevention.</p>
   </section>
 
-  <section class="carousel" id="imageCarousel">
-    <img src="your-photo-1.jpg" alt="Photo 1">
-    <img src="your-photo-2.jpg" alt="Photo 2">
-    <img src="your-photo-3.jpg" alt="Photo 3">
-    <!-- Add more images as needed -->
-  </section>
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <img src="images/Photo1.jpeg" alt="Photo 1">
+      <img src="images/Photo2.jpeg" alt="Photo 2">
+      <img src="images/Photo3.jpeg" alt="Photo 3">
+      <img src="images/Photo4.jpeg" alt="Photo 4">
+      <img src="images/photo5.jpeg" alt="Photo 5">
+      <img src="images/photo6.jpeg" alt="Photo 6">
+      <img src="images/photo7.jpeg" alt="Photo 7">
+      <img src="images/Photo8.jpeg" alt="Photo 8">
+      <img src="images/photo9.JPG" alt="Photo 9">
+      <img src="images/photo10.jpeg" alt="Photo 10">
+      <img src="images/Photo11.jpeg" alt="Photo 11">
+    </div>
+  </div>
 
   <section class="logos">
-    <img src="causes-logo.png" alt="Causes">
-    <img src="supercruise-logo.png" alt="Supercruise">
-    <img src="ckbg-logo.png" alt="CKBG">
+    <img src="images/causes-logo.png" alt="Causes">
+    <img src="images/supercruise-logo.png" alt="Supercruise">
+    <img src="images/ckbg-logo.png" alt="CKBG">
   </section>
-
-  <script>
-    const carousel = document.getElementById('imageCarousel');
-    let scrollAmount = 0;
-
-    function autoScrollCarousel() {
-      const scrollWidth = carousel.scrollWidth;
-      const visibleWidth = carousel.clientWidth;
-
-      if (scrollAmount + visibleWidth >= scrollWidth) {
-        scrollAmount = 0;
-      } else {
-        scrollAmount += visibleWidth;
-      }
-
-      carousel.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-
-    setInterval(autoScrollCarousel, 4000);
-  </script>
 </body>
 </html>
