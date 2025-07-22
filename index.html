@@ -6,8 +6,8 @@
   <title>Wyatt Scheberies</title>
   <style>
     body {
-      background-color: #12213e;
-      color: white;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
       text-align: center;
@@ -23,14 +23,14 @@
     .social-icons a {
       margin: 0 15px;
       text-decoration: none;
-      color: white;
+      color: #e6e6e6;
       font-size: 1.5em;
     }
     hr {
       width: 60%;
       margin: 30px auto;
       border: none;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #444;
     }
     .bio {
       max-width: 700px;
@@ -40,27 +40,27 @@
       line-height: 1.6;
     }
 
-    /* Carousel Styles */
     .carousel-wrapper {
       overflow: hidden;
       width: 100%;
-      max-width: 90vw;
-      margin: 0 auto 40px;
+      margin: 20px 0 60px;
     }
+
     .carousel {
       display: flex;
-      gap: 20px;
-      animation: scroll 40s linear infinite;
+      width: max-content;
+      animation: scroll 60s linear infinite;
     }
+
     .carousel img {
-      max-height: 300px;
-      height: auto;
-      width: auto;
+      height: 300px;
+      margin: 0 10px;
       border-radius: 8px;
-      flex-shrink: 0;
+      object-fit: cover;
     }
+
     @keyframes scroll {
-      0%   { transform: translateX(0); }
+      0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
@@ -71,6 +71,7 @@
       gap: 40px;
       padding: 40px 0;
     }
+
     .logos img {
       height: 60px;
       object-fit: contain;
@@ -81,10 +82,10 @@
   <header>
     <h1>WYATT SCHEBERIES</h1>
     <div class="social-icons">
-      <a href="#">📸</a>  <!-- Instagram -->
-      <a href="#">in</a> <!-- LinkedIn -->
+      <a href="#">📸</a>  
+      <a href="#">in</a>
       <a href="mailto:wyatt@scheberies.com">✉️</a>
-      <a href="#">GH</a> <!-- GitHub -->
+      <a href="#">GH</a>
     </div>
   </header>
 
@@ -96,24 +97,38 @@
 
   <div class="carousel-wrapper">
     <div class="carousel">
-      <img src="images/Photo1.jpeg" alt="Photo 1">
-      <img src="images/Photo2.jpeg" alt="Photo 2">
-      <img src="images/Photo3.jpeg" alt="Photo 3">
-      <img src="images/Photo4.jpeg" alt="Photo 4">
-      <img src="images/photo5.jpeg" alt="Photo 5">
-      <img src="images/photo6.jpeg" alt="Photo 6">
-      <img src="images/photo7.jpeg" alt="Photo 7">
-      <img src="images/Photo8.jpeg" alt="Photo 8">
-      <img src="images/photo9.JPG" alt="Photo 9">
-      <img src="images/photo10.jpeg" alt="Photo 10">
-      <img src="images/Photo11.jpeg" alt="Photo 11">
+      <!-- Image Set 1 -->
+      <img src="Photo1.jpeg" alt="Photo 1">
+      <img src="Photo2.jpeg" alt="Photo 2">
+      <img src="Photo3.jpeg" alt="Photo 3">
+      <img src="Photo4.jpeg" alt="Photo 4">
+      <img src="photo5.jpeg" alt="Photo 5">
+      <img src="photo6.jpeg" alt="Photo 6">
+      <img src="photo7.jpeg" alt="Photo 7">
+      <img src="Photo8.jpeg" alt="Photo 8">
+      <img src="photo9.JPG" alt="Photo 9">
+      <img src="photo10.jpeg" alt="Photo 10">
+      <img src="Photo11.jpeg" alt="Photo 11">
+
+      <!-- Duplicate for seamless scroll -->
+      <img src="Photo1.jpeg" alt="Photo 1">
+      <img src="Photo2.jpeg" alt="Photo 2">
+      <img src="Photo3.jpeg" alt="Photo 3">
+      <img src="Photo4.jpeg" alt="Photo 4">
+      <img src="photo5.jpeg" alt="Photo 5">
+      <img src="photo6.jpeg" alt="Photo 6">
+      <img src="photo7.jpeg" alt="Photo 7">
+      <img src="Photo8.jpeg" alt="Photo 8">
+      <img src="photo9.JPG" alt="Photo 9">
+      <img src="photo10.jpeg" alt="Photo 10">
+      <img src="Photo11.jpeg" alt="Photo 11">
     </div>
   </div>
 
   <section class="logos">
-    <img src="images/causes-logo.png" alt="Causes">
-    <img src="images/supercruise-logo.png" alt="Supercruise">
-    <img src="images/ckbg-logo.png" alt="CKBG">
+    <img src="causes-logo.png" alt="Causes">
+    <img src="supercruise-logo.png" alt="Supercruise">
+    <img src="ckbg-logo.png" alt="CKBG">
   </section>
 </body>
 </html>
