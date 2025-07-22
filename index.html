@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wyatt Scheberies</title>
   <style>
     body {
       background-color: #12213e;
       color: white;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
       text-align: center;
     }
@@ -21,23 +21,38 @@
       font-weight: bold;
     }
     .social-icons a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       color: white;
       font-size: 1.5em;
     }
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 40px auto;
-      max-width: 800px;
+    hr {
+      width: 60%;
+      margin: 30px auto;
+      border: none;
+      border-top: 1px solid #ccc;
     }
-    .gallery img {
+    .bio {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel img {
       width: 100%;
-      max-width: 250px;
+      max-width: 300px;
       border-radius: 8px;
+      scroll-snap-align: center;
     }
     .logos {
       display: flex;
@@ -56,14 +71,20 @@
   <header>
     <h1>WYATT SCHEBERIES</h1>
     <div class="social-icons">
-      <a href="#" title="Instagram">&#x1F4F7;</a>
-      <a href="#" title="LinkedIn">in</a>
-      <a href="#" title="Email">&#9993;</a>
-      <a href="#" title="GitHub">GH</a>
+      <a href="#">📸</a>  <!-- Instagram -->
+      <a href="#">in</a> <!-- LinkedIn -->
+      <a href="mailto:wyatt@scheberies.com">✉️</a>
+      <a href="#">GH</a> <!-- GitHub -->
     </div>
   </header>
 
-  <section class="gallery">
+  <hr />
+
+  <section class="bio">
+    <p>I currently work on digital giving at Causes.com and support early-stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees with my family, and worked on wildfire prevention in California.</p>
+  </section>
+
+  <section class="carousel">
     <img src="your-photo-1.jpg" alt="Photo 1">
     <img src="your-photo-2.jpg" alt="Photo 2">
     <img src="your-photo-3.jpg" alt="Photo 3">
@@ -71,8 +92,8 @@
 
   <section class="logos">
     <img src="causes-logo.png" alt="Causes">
-    <img src="school-logo.png" alt="Your School">
-    <img src="company-logo.png" alt="Company">
+    <img src="supercruise-logo.png" alt="Supercruise">
+    <img src="ckbg-logo.png" alt="CKBG">
   </section>
 </body>
 </html>
