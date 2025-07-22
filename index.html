@@ -6,9 +6,11 @@
   <title>Wyatt Scheberies</title>
   <!-- Preview when texted -->
   <meta property="og:title" content="Wyatt Scheberies" />
-  <meta property="og:image" content="https://scheberies.com/images/preview.jpeg" />
+  <meta property="og:image" content="https://scheberies.com/images/preview.jpg" />
   <meta property="og:url" content="https://scheberies.com" />
   <meta property="og:type" content="website" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/preview.jpeg" type="image/jpeg" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Google Font -->
@@ -72,6 +74,7 @@
       margin: 0 10px;
       border-radius: 8px;
       object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
@@ -87,6 +90,16 @@
     .logos img {
       height: 60px;
       object-fit: contain;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 600px) {
+      .carousel img {
+        height: 200px;
+      }
+      .bio {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
@@ -106,7 +119,7 @@
   <hr />
 
   <section class="bio">
-    <p>I currently work on digital giving at Causes.com and support early growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees, and contributed to fire mitigation in California.</p>
+    <p>I currently work on digital giving at Causes.com and support early growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees, and contributed to fire mitigaition in California.</p>
   </section>
 
   <div class="carousel-wrapper">
@@ -134,5 +147,6 @@
       <img src="images/photo10.jpeg" alt="Photo 10">
     </div>
   </div>
+
 </body>
 </html>
