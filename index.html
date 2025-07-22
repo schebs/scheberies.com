@@ -47,10 +47,13 @@
       padding: 20px;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      max-width: 100%;
     }
     .carousel img {
-      width: 100%;
-      max-width: 300px;
+      flex: 0 0 auto;
+      height: 280px;
+      width: auto;
+      object-fit: cover;
       border-radius: 8px;
       scroll-snap-align: center;
     }
@@ -71,23 +74,24 @@
   <header>
     <h1>WYATT SCHEBERIES</h1>
     <div class="social-icons">
-      <a href="#">📸</a>  <!-- Instagram -->
-      <a href="#">in</a> <!-- LinkedIn -->
+      <a href="#">📸</a>
+      <a href="#">in</a>
       <a href="mailto:wyatt@scheberies.com">✉️</a>
-      <a href="#">GH</a> <!-- GitHub -->
+      <a href="#">GH</a>
     </div>
   </header>
 
   <hr />
 
   <section class="bio">
-    <p>I currently work on digital giving at Causes.com and support early growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas, and worked on wildfire prevention in California.</p>
+    <p>I currently work on digital giving at Causes.com and support early-growth stage investing at Supercruise. Before that, I helped grow a premium spirits brand, grew Christmas trees, and worked on wildfire prevention.</p>
   </section>
 
-  <section class="carousel">
+  <section class="carousel" id="imageCarousel">
     <img src="your-photo-1.jpg" alt="Photo 1">
     <img src="your-photo-2.jpg" alt="Photo 2">
     <img src="your-photo-3.jpg" alt="Photo 3">
+    <!-- Add more images as needed -->
   </section>
 
   <section class="logos">
@@ -95,5 +99,28 @@
     <img src="supercruise-logo.png" alt="Supercruise">
     <img src="ckbg-logo.png" alt="CKBG">
   </section>
+
+  <script>
+    const carousel = document.getElementById('imageCarousel');
+    let scrollAmount = 0;
+
+    function autoScrollCarousel() {
+      const scrollWidth = carousel.scrollWidth;
+      const visibleWidth = carousel.clientWidth;
+
+      if (scrollAmount + visibleWidth >= scrollWidth) {
+        scrollAmount = 0;
+      } else {
+        scrollAmount += visibleWidth;
+      }
+
+      carousel.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    setInterval(autoScrollCarousel, 4000);
+  </script>
 </body>
 </html>
