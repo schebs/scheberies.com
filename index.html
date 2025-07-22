@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wyatt Scheberies</title>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       background-color: #0d0d0d;
@@ -22,9 +24,13 @@
     }
     .social-icons a {
       margin: 0 15px;
-      text-decoration: none;
       color: #e6e6e6;
-      font-size: 1.5em;
+      font-size: 1.8em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social-icons a:hover {
+      color: #999;
     }
     hr {
       width: 60%;
@@ -81,10 +87,14 @@
 <body>
   <header>
     <h1>WYATT SCHEBERIES</h1>
-  <div class="social-icons">
-  <a href="https://www.linkedin.com/in/wyattscheberies" target="_blank">in</a>
-  <a href="mailto:wyatt@scheberies.com">✉️</a>
-</div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/wyattscheberies" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:wyatt@scheberies.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </header>
 
   <hr />
@@ -95,36 +105,13 @@
 
   <div class="carousel-wrapper">
     <div class="carousel">
-  <!-- Image Set 1 -->
-  <img src="images/photo1.jpeg" alt="Photo 1">
-  <img src="images/photo2.jpeg" alt="Photo 2">
-  <img src="images/photo3.jpeg" alt="Photo 3">
-  <img src="images/photo4.jpeg" alt="Photo 4">
-  <img src="images/photo5.jpeg" alt="Photo 5">
-  <img src="images/photo6.jpeg" alt="Photo 6">
-  <img src="images/photo7.jpeg" alt="Photo 7">
-  <img src="images/photo8.jpeg" alt="Photo 8">
-  <img src="images/photo9.jpeg" alt="Photo 9">
-  <img src="images/photo10.jpeg" alt="Photo 10">
-
-  <!-- Duplicate for seamless scroll -->
-  <img src="images/photo1.jpeg" alt="Photo 1">
-  <img src="images/photo2.jpeg" alt="Photo 2">
-  <img src="images/photo3.jpeg" alt="Photo 3">
-  <img src="images/photo4.jpeg" alt="Photo 4">
-  <img src="images/photo5.jpeg" alt="Photo 5">
-  <img src="images/photo6.jpeg" alt="Photo 6">
-  <img src="images/photo7.jpeg" alt="Photo 7">
-  <img src="images/photo8.jpeg" alt="Photo 8">
-  <img src="images/photo9.jpeg" alt="Photo 9">
-  <img src="images/photo10.jpeg" alt="Photo 10">
-</div>
-  </div>
-
-  <section class="logos">
-    <img src="causes-logo.png" alt="Causes">
-    <img src="supercruise-logo.png" alt="Supercruise">
-    <img src="ckbg-logo.png" alt="CKBG">
-  </section>
-</body>
-</html>
+      <!-- Image Set -->
+      <img src="images/photo1.jpeg" alt="Photo 1">
+      <img src="images/photo2.jpeg" alt="Photo 2">
+      <img src="images/photo3.jpeg" alt="Photo 3">
+      <img src="images/photo4.jpeg" alt="Photo 4">
+      <img src="images/photo5.jpeg" alt="Photo 5">
+      <img src="images/photo6.jpeg" alt="Photo 6">
+      <img src="images/photo7.jpeg" alt="Photo 7">
+      <img src="images/photo8.jpeg" alt="Photo 8">
+      <img src="images/photo9.jpeg" alt="Photo
